@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { gsap } from "gsap";
-
-import "./header.css";
 import { RiMenu3Fill, RiCloseLine } from "react-icons/ri";
+import './header.css'
 
 const nav_links = [
   { path: "#", display: "Home" },
@@ -17,36 +16,42 @@ const Header = () => {
   const menuRef = useRef(null);
   const logoRef = useRef(null);
   const menuItemsRef = useRef([]);
-  const menuItemsAnimateRef = useRef([]);
   const loginBtnRef = useRef(null);
-  const hasAnimatedRef = useRef(false);
 
+  // Initial load animations
   useEffect(() => {
-    if (!hasAnimatedRef.current) {
-      hasAnimatedRef.current = true;
+    // Set initial states
+    gsap.set(logoRef.current, { opacity: 0, y: -50 });
+    gsap.set(menuItemsRef.current, { opacity: 0, y: -50 });
+    gsap.set(loginBtnRef.current, { opacity: 0, y: -50 });
 
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    // Create and play animation timeline
+    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      gsap.set(
-        [logoRef.current, ...menuItemsAnimateRef.current, loginBtnRef.current],
-        { opacity: 0, y: -50 }
-      );
+    tl.to(logoRef.current, { 
+      opacity: 1, 
+      y: 0, 
+      duration: 0.8 
+    })
+    .to(menuItemsRef.current, { 
+      opacity: 1, 
+      y: 0, 
+      duration: 0.9, 
+      stagger: 0.2 
+    }, "-=0.5")
+    .to(loginBtnRef.current, { 
+      opacity: 1, 
+      y: 0, 
+      duration: 0.5 
+    }, "-=0.3");
 
-      tl.to(logoRef.current, { opacity: 1, y: 0, duration: 0.8 })
-        .to(
-          menuItemsAnimateRef.current,
-          { opacity: 1, y: 0, duration: 0.9, stagger: 0.2, ease: "power2.out" },
-          "-=0.5"
-        )
-        .to(
-          loginBtnRef.current,
-          { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
-          "-=0.3"
-        );
-    }
+    return () => tl.kill();
   }, []);
 
+  // Mobile menu animations
   useEffect(() => {
+    if (!menuRef.current) return;
+
     if (isMenuOpen) {
       const menuTl = gsap.timeline({ defaults: { ease: "power2.out" } });
 
@@ -57,14 +62,14 @@ const Header = () => {
           { x: "0%", opacity: 1, duration: 0.3 }
         )
         .fromTo(
-          menuItemsRef.current,
+          ".mobile-menu-item",
           { x: -50, opacity: 0 },
           { x: 0, opacity: 1, duration: 0.3, stagger: 0.1 },
           "-=0.1"
         );
 
       return () => menuTl.kill();
-    } else if (menuRef.current) {
+    } else {
       gsap.to(menuRef.current, {
         x: "-100%",
         opacity: 0,
@@ -74,7 +79,7 @@ const Header = () => {
     }
   }, [isMenuOpen]);
 
-  const renderNavLink = (item, index) => {
+  const renderNavLink = (item) => {
     if (item.isExternal) {
       return (
         <a 
@@ -112,51 +117,69 @@ const Header = () => {
 
         <div className="absolute right-4 top-5 z-[60] lg:hidden">
           {isMenuOpen ? (
-            <RiCloseLine className="text-2xl font-extrabold cursor-pointer" onClick={() => setIsMenuOpen(false)} />
+            <RiCloseLine 
+              className="text-2xl font-extrabold cursor-pointer" 
+              onClick={() => setIsMenuOpen(false)} 
+            />
           ) : (
-            <RiMenu3Fill className="text-2xl font-extrabold cursor-pointer" onClick={() => setIsMenuOpen(true)} />
+            <RiMenu3Fill 
+              className="text-2xl font-extrabold cursor-pointer" 
+              onClick={() => setIsMenuOpen(true)} 
+            />
           )}
         </div>
 
         <nav className="navlinks">
           <ul className="flex xs:hidden lg:flex gap-6 items-center">
             {nav_links.map((item, index) => (
-              <li key={index} ref={(el) => (menuItemsAnimateRef.current[index] = el)}
-                className="bg-gradient-to-b from-[#0E515B] via-[#2672a2] to-[#a1c5f1] bg-clip-text text-transparent font-bold">
-                {renderNavLink(item, index)}
+              <li 
+                key={index} 
+                ref={el => menuItemsRef.current[index] = el}
+                className="bg-gradient-to-b from-[#0E515B] via-[#2672a2] to-[#a1c5f1] bg-clip-text text-transparent font-bold"
+              >
+                {renderNavLink(item)}
               </li>
             ))}
             <li ref={loginBtnRef}>
-            <Link
-  to="#"
-  className="
-    inline-block text-[22px] bg-[#4c9ca9] !px-6 !py-1 !pb-3 font-medium leading-tight rounded-md 
-    shadow-md hover:shadow-xl
-    hover:bg-[#077078] hover:scale-105 hover:shadow-lg transform transition-all duration-300
-    !text-white
-  "
->
-  Login
-</Link>
-
+              <Link
+                to="#"
+                className="inline-block text-[22px] bg-[#4c9ca9] !px-6 !py-1 !pb-3 font-medium leading-tight rounded-md 
+                  shadow-md hover:shadow-xl hover:bg-[#077078] hover:scale-105 hover:shadow-lg transform transition-all duration-300
+                  !text-white"
+              >
+                Login
+              </Link>
             </li>
           </ul>
 
-          <ul ref={menuRef} className={`xs:block xs:h-dvh lg:hidden w-dvw text-center gap-2 fixed top-0 left-0 bg-white z-50 ${isMenuOpen ? "block" : "hidden"}`}>
+          <ul 
+            ref={menuRef} 
+            className={`xs:block xs:h-dvh lg:hidden w-dvw text-center gap-2 fixed top-0 left-0 bg-white z-50`}
+            style={{ transform: 'translateX(-100%)', opacity: 0 }}
+          >
             <div className="flex justify-between items-center px-2 py-2">
-              <img src='../../../assets/images/logo.png' className="h-[60px] bg-amber-50 rounded-2xl" alt="Logo" />
+              <img 
+                src='../../../assets/images/logo.png' 
+                className="h-[60px] bg-amber-50 rounded-2xl" 
+                alt="Logo" 
+              />
             </div>
 
             {nav_links.map((item, index) => (
-              <li key={index} ref={(el) => (menuItemsRef.current[index] = el)}
-                className="bg-gradient-to-b text-4xl from-[#95e7f4] via-[#8eeaf8] to-[#2cad93] bg-clip-text text-transparent font-medium mt-5">
-                {renderNavLink(item, index)}
+              <li 
+                key={index}
+                className="mobile-menu-item bg-gradient-to-b text-4xl from-[#95e7f4] via-[#8eeaf8] to-[#2cad93] bg-clip-text text-transparent font-medium mt-5"
+              >
+                {renderNavLink(item)}
               </li>
             ))}
 
-            <li ref={(el) => (menuItemsRef.current[nav_links.length] = el)}>
-              <Link to="#" className="inline-block text-[22px] bg-[#4c9ca9] !px-6 !py-1 font-medium leading-tight rounded-md hover:bg-[#077078] !text-white mt-5"
-                onClick={() => setIsMenuOpen(false)}>
+            <li className="mobile-menu-item">
+              <Link 
+                to="#" 
+                className="inline-block text-[22px] bg-[#4c9ca9] !px-6 !py-1 font-medium leading-tight rounded-md hover:bg-[#077078] !text-white mt-5"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Login
               </Link>
             </li>
