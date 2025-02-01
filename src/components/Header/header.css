@@ -1,0 +1,26 @@
+.header{
+   
+    line-height: 80px;
+    
+    
+    
+    
+    
+}
+
+@media (max-width: 950px) {
+    header ul{
+        backdrop-filter: blur(16px) saturate(127%);
+        -webkit-backdrop-filter: blur(16px) saturate(127%);
+        background-color: rgba(17, 25, 40, 0.59);
+        
+        border: 1px solid rgba(255, 255, 255, 0.125);
+    }
+}
+
+
+
+
+
+
+

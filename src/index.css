@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@theme {
+    --color-top-link: #0E515B; 
+    --color-bottom-link: #77DAE9; 
+    --font-RabsurRegular: 'rabsurFont', sans-serif;
+    --font-AfacadRegular: 'AfacadRegular', sans-serif;
+    --font-AfacadSemiBold: 'AfacadSemiBold', sans-serif;
+    --font-AfacadBold: 'AfacadBold', sans-serif;
+    --font-MosafinBold: 'MosafinBold', sans-serif;
+    --font-MosafinExtraBold: 'MosafinExtraBold', sans-serif;
+    --font-MosafinSemiBold: 'MosafinSemiBold', sans-serif;
+    --font-MosafinBlack: 'MosafinBlack', sans-serif;
+    --font-MosafinMedium: 'MosafinMedium', sans-serif;
+    --breakpoint-xs: 300px;
+}
+
+@layer base {
+    @font-face {
+        font-family: 'rabsurFont';
+        src: url('/fonts/rabsur-regular.otf') format('opentype');
+        font-weight: 400;
+        font-style: normal;
+    } 
+    @font-face {
+        font-family: 'AfacadRegular';
+        src: url('/fonts/Afacad-Regular-BF6566a53564cc8.otf') format('opentype');
+        font-weight: 500;
+        font-style: normal;
+    }    
+    @font-face {
+        font-family: 'AfacadSemiBold';
+        src: url('/fonts/Afacad-SemiBold-BF6566a535dd728.otf') format('opentype');
+        font-weight: 600;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'AfacadBold';
+        src: url('/fonts/Afacad-Bold-BF6566a535745bc.otf') format('opentype');
+        font-weight: 600;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'MosafinBold';
+        src: url('/fonts/mosafin-bold.otf') format('opentype');
+        font-weight: 700;
+        font-style: normal;
+    } 
+    
+    @font-face {
+        font-family: 'MosafinExtraBold';
+        src: url('/fonts/mosafin-extrabold.otf') format('opentype');
+        font-weight: 800;
+        font-style: normal;
+    } 
+    
+    @font-face {
+        font-family: 'MosafinSemiBold';
+        src: url('/fonts/mosafin-semibold.otf') format('opentype');
+        font-weight: 600;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'MosafinBlack';
+        src: url('/fonts/mosafin-black.otf') format('opentype');
+        font-weight: 900;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'MosafinMedium';
+        src: url('/fonts/mosafin-medium.otf') format('opentype');
+        font-weight: 500;
+        font-style: normal;
+    }
+}
