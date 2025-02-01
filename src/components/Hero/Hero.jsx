@@ -38,7 +38,7 @@ const Hero = () => {
     <div
       className="h-screen flex items-center justify-center lg:px-6 py-10"
       style={{
-        backgroundImage: `url('../../../assets/images/Home Page.png')`,
+        backgroundImage: `url('../../../assets/images/Home Page.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
