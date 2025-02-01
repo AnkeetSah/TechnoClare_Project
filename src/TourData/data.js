@@ -47,7 +47,7 @@ export const tours = [
         id: 3,
         img: 'https://i.pinimg.com/originals/27/17/7e/27177e70a5078a72cd7d4dff76a208c9.jpg',
         price: '1799',
-        PackageName: 'Chilika Lake Wildlife & Bird Watching Tour',
+        PackageName: 'Bhubaneswar City & Dhauli Tour',
         name: "Cultural Expedition",
         location: "Japan",
         price: 1200,
