@@ -147,10 +147,10 @@ const Footer = () => {
           </h2>
           <div className="w-full h-56 rounded-lg overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.373398549994!2d83.82847747480561!3d19.047313582151332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3c96658f8652ad%3A0x7dafcb1b8586f019!2sGIET%20University!5e0!3m2!1sen!2sin!4v1738155301883!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59407.234854202296!2d83.9316833232261!3d21.470392954423403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a21167f047cd9b5%3A0x7660a40be684d655!2sSambalpur%2C%20Odisha!5e0!3m2!1sen!2sin!4v1738419189978!5m2!1sen!2sin"
               className="w-full h-full border-0"
               loading="lazy"
-              title="GIET University Location"
+              title="Sainath Travels"
               allowFullScreen=""
               referrerPolicy="no-referrer-when-downgrade"
             />
