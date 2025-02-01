@@ -5,6 +5,7 @@ import Places from '../components/Places_To_Visit/Places';
 import Experience from '../components/Experiences/Experience';
 import Explore from '../components/explore/Explore';
 import Hero from '../components/Hero/Hero';
+import Footer from '../components/Footer/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,6 +59,7 @@ const Home = () => {
       {/*------------Experiences-----------------*/}
       <Experience />
       {/*------------Experiences-----------------*/}
+      <Footer/>
     </div>
   );
 };

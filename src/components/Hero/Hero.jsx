@@ -70,7 +70,7 @@ const Hero = () => {
         <h1
   ref={headingRef}
   className="
-    xs:text-4xl xs:mt-1 md:mt-2 lg:mt-0 lg:text-9xl
+    xs:text-5xl xs:mt-1 md:mt-2 lg:mt-0 lg:text-9xl
     font-RabsurRegular text-transparent bg-clip-text
     bg-[#032024]
   "
