@@ -39,7 +39,7 @@ const Login = () => {
               className="w-[360px] flex items-center justify-center gap-3 h-14 bg-white border border-gray-300 hover:border-gray-400 rounded-full shadow-sm text-sm font-medium text-gray-600 mb-4"
             >
               <img
-                src="../assets/images/Group.png"
+                src="../assets/images/google.png"
                 alt="Google Icon"
                 className="h-6"
               />

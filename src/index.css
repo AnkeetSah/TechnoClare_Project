@@ -2,6 +2,7 @@
 @theme {
     --color-top-link: #0E515B; 
     --color-bottom-link: #77DAE9; 
+    --color-ticket:#263238;
     --font-RabsurRegular: 'rabsurFont', sans-serif;
     --font-AfacadRegular: 'AfacadRegular', sans-serif;
     --font-AfacadSemiBold: 'AfacadSemiBold', sans-serif;

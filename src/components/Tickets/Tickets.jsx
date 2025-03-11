@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import BackLink from '../BackLink';
 import Bookings from'./Bookings'
 const Tickets = () => {
-  const [ticket, setticket] = useState(false);
+  const [ticket, setticket] = useState(true);
 
   return (
     <div className='px-6 py-[95px] h-screen'>

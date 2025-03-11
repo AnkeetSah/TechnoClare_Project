@@ -5,9 +5,10 @@ import { RiMenu3Fill, RiCloseLine } from "react-icons/ri";
 import './header.css'
 
 const nav_links = [
-  { path: "#", display: "Home" },
-  { path: "#", display: "Tours" },
-  { path: "#", display: "About Us" },
+  { path: "/", display: "Home" },
+  { path: "/tour", display: "Tours" },
+  { path: "/aboutus", display: "About Us" },
+  { path: "/ticket", display: "Tickets" },
   { path: "https://myshivambus.in", display: "Shivam", isExternal: true }
 ];
 
@@ -142,7 +143,7 @@ const Header = () => {
             ))}
             <li ref={loginBtnRef}>
               <Link
-                to="#"
+                to="/login"
                 className="inline-block text-[22px] bg-[#4c9ca9] !px-6 !py-1 !pb-3 font-medium leading-tight rounded-md 
                   shadow-md hover:shadow-xl hover:bg-[#077078] hover:scale-105 hover:shadow-lg transform transition-all duration-300
                   !text-white"
@@ -176,7 +177,7 @@ const Header = () => {
 
             <li className="mobile-menu-item">
               <Link 
-                to="#" 
+                to="/login" 
                 className="inline-block text-[22px] bg-[#4c9ca9] !px-6 !py-1 font-medium leading-tight rounded-md hover:bg-[#077078] !text-white mt-5"
                 onClick={() => setIsMenuOpen(false)}
               >

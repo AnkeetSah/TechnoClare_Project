@@ -9,6 +9,8 @@ import SearchResultList from '../pages/SearchResultList';
 import PageNotFound from '../pages/PageNotFound'; // Import the PageNotFound component
 import AboutUs from '../pages/AboutUs';
 import Tickets from '../components/Tickets/Tickets';
+import Booking from '../pages/Booking';
+import CarRent from '../pages/CarRent';
 
 const Routers = () => {
   return (
@@ -20,6 +22,8 @@ const Routers = () => {
       <Route path="/login" element={<Login />} />
      <Route path='/aboutus' element={<AboutUs/>}/>
      <Route path='/ticket' element={<Tickets/>}/>
+     <Route path='/bookingTour/:id' element={<Booking/>}/>
+     <Route path='/carBooking' element={<CarRent/>}/>
       
       
       {/* Page Not Found Route */}

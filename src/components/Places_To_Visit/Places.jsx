@@ -36,7 +36,7 @@ const Places = ({ limit }) => {
       <div className="flex xs:justify-center gap-6 mt-10 flex-wrap h-auto mb-14">
         {/* Conditional rendering based on the limit */}
         {tours.slice(0, limit || tours.length).map((places, index) => (
-        <Link to={`#`}>
+        <Link to={`/tour/${places.id}`}>
           <div key={index} className="place-item flex flex-col gap-4 xs:mb-2 lg:mb-0">
             <div
               className="h-[400px] w-[285px] shadow-xl"
