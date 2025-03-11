@@ -74,7 +74,7 @@ const Places = ({ limit }) => {
         ))}
       </div>
 
-      {tours.limit ? <MoreBtn />:''}
+      {tours.limit ? '':<MoreBtn />}
     </div>
   );
 };
