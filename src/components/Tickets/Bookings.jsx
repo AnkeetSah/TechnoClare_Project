@@ -6,7 +6,7 @@ const TourList = () => {
 
   const tours = [
     {
-      image: "/assets/images/1431621.jpg",
+      image: "../../../assets/images/1431621.jpg",
       name: "Wine tasting in Tuscany",
       date: "FRI, 23 DEC 2022",
       time: "15:00",
@@ -18,7 +18,7 @@ const TourList = () => {
       status: { name: "Upcoming", color: "text-orange-500", icon: "🟠" },
     },
     {
-      image: "/assets/images/1431610.jpg",
+      image: "../../../assets/images/1431610.jpg",
       name: "Wine tasting in Tuscany",
       date: "FRI, 23 DEC 2022",
       time: "15:00",
