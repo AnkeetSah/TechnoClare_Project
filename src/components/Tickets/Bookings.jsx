@@ -6,7 +6,7 @@ const TourList = () => {
 
   const tours = [
     {
-      image: "../../../public/assets/images/1431621.jpg",
+      image: "/assets/images/1431621.jpg",
       name: "Wine tasting in Tuscany",
       date: "FRI, 23 DEC 2022",
       time: "15:00",
@@ -18,7 +18,7 @@ const TourList = () => {
       status: { name: "Upcoming", color: "text-orange-500", icon: "🟠" },
     },
     {
-      image: "../../../public/assets/images/1431610.jpg",
+      image: "/assets/images/1431610.jpg",
       name: "Wine tasting in Tuscany",
       date: "FRI, 23 DEC 2022",
       time: "15:00",
@@ -40,8 +40,23 @@ const TourList = () => {
   }, []);
 
   return (
-    <div className="px-4 md:px-8" ref={componentRef}>
-      <div className="overflow-x-auto">
+    <div className=" md:px-8" ref={componentRef}>
+      <div className="block md:hidden">
+        {tours.map((tour, index) => (
+          <div key={index} className="w-full shadow rounded-lg  mb-4 p-4">
+            <img src={tour.image} alt="Tour" className="w-full  h-40 rounded-md object-cover" />
+            <h3 className="font-semibold mt-2">{tour.name}</h3>
+            <p className="text-sm">📅 {tour.date} | 🕒 {tour.time}</p>
+            <div className="flex items-center mt-2">
+              <img src={tour.paymentMethod.icon} alt={tour.paymentMethod.name} className="w-6 h-6 mr-2" />
+              <span className="font-semibold">{tour.paymentMethod.name}</span>
+            </div>
+            <p className="font-semibold mt-2">{tour.price}</p>
+            <span className={`font-semibold ${tour.status.color}`}>{tour.status.icon} {tour.status.name}</span>
+          </div>
+        ))}
+      </div>
+      <div className="hidden md:block overflow-x-auto">
         <table className="w-full bg-white shadow rounded-lg">
           <thead>
             <tr className="text-left bg-gray-50">
@@ -55,33 +70,21 @@ const TourList = () => {
             {tours.map((tour, index) => (
               <tr key={index} className="border-b">
                 <td className="p-4 flex flex-col md:flex-row md:items-center md:space-x-4">
-                  <img
-                    src={tour.image}
-                    alt="Tour"
-                    className="w-full md:w-20 h-14 rounded-md object-cover mb-2 md:mb-0"
-                  />
+                  <img src={tour.image} alt="Tour" className="w-full md:w-20 h-14 rounded-md object-cover mb-2 md:mb-0" />
                   <div>
                     <h3 className="font-semibold">{tour.name}</h3>
-                    <p className="text-sm">
-                      📅 {tour.date} | 🕒 {tour.time}
-                    </p>
+                    <p className="text-sm">📅 {tour.date} | 🕒 {tour.time}</p>
                   </div>
                 </td>
                 <td className="p-4">
                   <div className="flex items-center font-semibold">
-                    <img
-                      src={tour.paymentMethod.icon}
-                      alt={tour.paymentMethod.name}
-                      className="w-6 h-6 mr-2"
-                    />
+                    <img src={tour.paymentMethod.icon} alt={tour.paymentMethod.name} className="w-6 h-6 mr-2" />
                     {tour.paymentMethod.name}
                   </div>
                 </td>
                 <td className="p-4">{tour.price}</td>
                 <td className="p-4">
-                  <span className={`font-semibold ${tour.status.color}`}>
-                    {tour.status.icon} {tour.status.name}
-                  </span>
+                  <span className={`font-semibold ${tour.status.color}`}>{tour.status.icon} {tour.status.name}</span>
                 </td>
               </tr>
             ))}
