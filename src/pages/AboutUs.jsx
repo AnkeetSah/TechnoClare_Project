@@ -4,6 +4,7 @@ const AboutUs = () => {
   return (
     <div className='px-6 py-[95px] h-screen'>
       AboutUs
+      
     </div>
   )
 }
