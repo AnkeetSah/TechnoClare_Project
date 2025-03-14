@@ -3,8 +3,11 @@ import { useSelector } from "react-redux";
 import { FaRegCalendarDays } from "react-icons/fa6";
 import { LuClock4 } from "react-icons/lu";
 import dayjs from "dayjs";
-
+import { ToastContainer, toast } from 'react-toastify';
 const BookingOverview = () => {
+    const notify = () => toast("Tour Booked Succesfully");
+  
+
   // Access visitDate, visitTime, and people from Redux
   const visitDate = useSelector((state) => state.tourBooking.visitDate);
   const visitTime = useSelector((state) => state.tourBooking.visitTime);
@@ -73,9 +76,11 @@ const BookingOverview = () => {
         </div>
 
         <div className="flex gap-3">
-          <button className="text-[#0E515B] font-semibold cursor-pointer rounded-3xl w-full py-2 bg-gradient-to-b from-[#86d2dd] via-[#85d7e1] to-[#c5ebf0]">
+          <button onClick={notify} className="text-[#0E515B] font-semibold cursor-pointer rounded-3xl w-full py-2 bg-gradient-to-b from-[#86d2dd] via-[#85d7e1] to-[#c5ebf0]">
             Make the Payment
           </button>
+         
+        <ToastContainer />
         </div>
         {/* ------------------------Bottom Layer End---------------------------- */}
       </div>

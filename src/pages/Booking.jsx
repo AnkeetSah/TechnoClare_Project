@@ -7,7 +7,7 @@ import FirstForm from "../components/TourBookingForms/FirstForm";
 
 import BookingOverview from "../components/TourBookingForms/BookingOverview";
 const Booking = () => {
-  
+  const notify = () => toast("Wow so easy!");
 
   const members = [
     {
@@ -47,6 +47,7 @@ const Booking = () => {
 
           {/* --------------------------------Booking Details Card Div Start----------------------------------- */}
           <BookingOverview />
+          
           {/* --------------------------------Booking Details Card Div End----------------------------------- */}
         </div>
         {/* --------------------------Main div End-------------------------------------------------- */}
