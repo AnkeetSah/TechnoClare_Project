@@ -11,7 +11,7 @@ import {
 } from "react-icons/hi2";
 
 
-const cabBooking1 = () => {
+const Cabs = () => {
   return (
     <div>
        {/* Location Selection */}
@@ -94,4 +94,4 @@ const cabBooking1 = () => {
   )
 }
 
-export default cabBooking1
+export default Cabs

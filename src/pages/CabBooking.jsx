@@ -7,12 +7,12 @@ import BackLink from "../components/BackLink";
 import Button from "@mui/material/Button";
 
 // Import the components properly
-import CabBooking1 from "./CabBooking1"; // Make sure it's a React component
+import Cabs from "./Cabs"; // Make sure it's a React component
 import SelectCar from "./SelectCar"; // Create this component if not already
 import FinalDetails from "./FinalDetails"; // Create this component if not already
 
 const steps = ["Enter details", "Select a car", "Final details"];
-const stepComponents = [<CabBooking1 />, <SelectCar />, <FinalDetails />];
+const stepComponents = [<Cabs />, <SelectCar />, <FinalDetails />];
 
 export default function CabBooking() {
   const [activeStep, setActiveStep] = React.useState(0); 
