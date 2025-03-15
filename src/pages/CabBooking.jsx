@@ -15,7 +15,7 @@ const steps = ["Enter details", "Select a car", "Final details"];
 const stepComponents = [<CabBooking1 />, <SelectCar />, <FinalDetails />];
 
 export default function CabBooking() {
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = React.useState(0); 
 
   const handleNext = () => {
     setActiveStep((prevStep) => prevStep + 1);
