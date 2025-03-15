@@ -4,12 +4,12 @@ import BackLink from "../components/BackLink";
 
 const Login = () => {
   return (
-    <div className="px-6 py-[95px] h-screen ">
+    <div className="lg:px-6 py-[95px] h-screen ">
        <BackLink/>
       <div className="flex w-full  ">
-        <div className="flex  w-full  ">
+        <div className="flex  w-full flex-wrap"> 
           {/* Left Side: Image */}
-          <div className="lg:w-1/2 w-full">
+          <div className="lg:w-1/2 w-full xs:hidden lg:block">
             <img
               src="../assets/images/pana.svg"
               alt="Login Illustration"
@@ -18,7 +18,7 @@ const Login = () => {
           </div>
 
           {/* Right Side: Login Form */}
-          <div className="w-1/2  p-8 ">
+          <div className="lg:w-1/2   lg:p-8 xs:mx-auto lg:mx-0 ">
             
             <h1 className="text-3xl lg:text-4xl text-[#0C6D7C] font-semibold mb-4 flex items-center font-RabsurRegular">
               Login
@@ -64,6 +64,7 @@ const Login = () => {
               />
               Sign in with Facebook
             </button>
+
           </div>
         </div>
       </div>
