@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { LiaMapMarkerSolid } from "react-icons/lia";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 const Explore = () => {
@@ -112,7 +112,8 @@ const Explore = () => {
         </div>
 
         {/* Car Block */}
-        <div className="car xs:h-[338px] xs:w-[350px] lg:h-[338px] sm:w-[554px] bg-gradient-to-b from-[#C7E1E5] to-[#fff] shadow-md relative rounded-3xl">
+       <Link  to="/cabBooking">
+       <div className="car xs:h-[338px] xs:w-[350px] lg:h-[338px] sm:w-[554px] bg-gradient-to-b from-[#C7E1E5] to-[#fff] shadow-md relative rounded-3xl">
           <div className="leading-none pl-8 pt-8">
             <h1 className="font-RabsurRegular text-transparent bg-clip-text bg-gradient-to-b from-[#0E515B] via-[#0E515B] to-[#454545] text-6xl">
               Rent a
@@ -131,6 +132,7 @@ const Explore = () => {
             alt=""
           />
         </div>
+        </Link>
 
         {/* Bus Block */}
         <div className="bus xs:h-[538px] xs:w-[350px] lg:h-[538px] sm:w-[554px] lg:w-[850px] bg-gradient-to-b from-[#C7E1E5] to-[#fff] rounded-3xl shadow-md relative">
