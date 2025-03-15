@@ -3,7 +3,7 @@ import React from 'react'
 const FinalDetails = () => {
   return (
     <div>
-      Final details
+      Final details 
     </div>
   )
 }
