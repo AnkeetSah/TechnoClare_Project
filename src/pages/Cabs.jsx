@@ -86,9 +86,7 @@ const Cabs = () => {
 
       {/* Button */}
       <div className="flex justify-center mt-8">
-      <button  className="text-black font-MosafinMedium text-2xl font-semibold cursor-pointer rounded-3xl w-[700px]  py-4 bg-gradient-to-b from-[#D4F8FE] via-[#D4F8FE] to-[#c5ebf0]">
-         Search Vechicles
-          </button>
+      
       </div>
      </div>
   )

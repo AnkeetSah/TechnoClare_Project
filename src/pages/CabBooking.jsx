@@ -30,7 +30,7 @@ export default function CabBooking() {
       <BackLink />
 
       <Box sx={{ width: "70%", margin: "auto" }}>
-        <Stepper activeStep={activeStep}>
+        <Stepper activeStep={activeStep} alternativeLabel>
           {steps.map((label, index) => (
             <Step key={index}>
               <StepLabel>{label}</StepLabel>
@@ -45,20 +45,40 @@ export default function CabBooking() {
       </Box>
 
       {/* Navigation Buttons */}
-      <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+      <div className="flex justify-center gap-6">
         <Button
-          color="inherit"
           disabled={activeStep === 0}
           onClick={handleBack}
-          sx={{ mr: 1 }}
+          sx={{
+            bgcolor: "#ea2a30",
+            color: "white",
+            fontSize: "1.2rem",
+            fontWeight: "600",
+            borderRadius: "25px",
+            width: "180px",
+            py: "12px",
+            "&:hover": { bgcolor: "#d1262a" },
+          }}
         >
           Back
         </Button>
-        <Box sx={{ flex: "1 1 auto" }} />
-        <Button onClick={handleNext} variant="contained">
+
+        <Button
+          onClick={handleNext}
+          sx={{
+            bgcolor: "#D4F8FE",
+            color: "black",
+            fontSize: "1.2rem",
+            fontWeight: "600",
+            borderRadius: "25px",
+            width: "180px",
+            py: "12px",
+            "&:hover": { bgcolor: "#bcecf1" },
+          }}
+        >
           {activeStep === steps.length - 1 ? "Finish" : "Next"}
         </Button>
-      </Box>
+      </div>
     </div>
   );
 }
