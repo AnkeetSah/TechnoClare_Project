@@ -14,10 +14,9 @@ function CoastalGallery({ images }) {
           {/* Main Image */}
           <div className="relative aspect-[16/9] overflow-hidden rounded-lg shadow-md">
             <img
-              src={images[selectedImage]}
-              alt={`Gallery Image ${selectedImage + 1}`}
+              src={images[selectedImage]} // Optional chaining to handle undefined
+              alt={images[selectedImage]} // Providing default alt text
               className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
-              loading="lazy"
             />
           </div>
 
@@ -27,16 +26,17 @@ function CoastalGallery({ images }) {
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
-                className={`relative aspect-[4/3] overflow-hidden rounded-lg transition-all duration-300 shadow-sm
+                className={`
+                  relative aspect-[4/3] overflow-hidden rounded-lg transition-all duration-300 shadow-sm
                   hover:ring-2 hover:ring-offset-2 hover:ring-blue-500 hover:shadow-md
                   focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500
-                  ${selectedImage === index ? "ring-2 ring-offset-2 ring-blue-500" : ""}`}
+                  ${selectedImage === index ? "ring-2 ring-offset-2 ring-blue-500" : ""}
+                `}
               >
                 <img
                   src={image || "/placeholder.svg"}
-                  alt={`Thumbnail ${index + 1}`}
+                 
                   className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
-                  loading="lazy"
                 />
               </button>
             ))}
