@@ -46,38 +46,21 @@ export default function CabBooking() {
 
       {/* Navigation Buttons */}
       <div className="flex justify-center gap-6">
-        <Button
+        <button className="bg-gray-500 cursor-pointer hover:bg-gray-700 active:scale-95 transition-all duration-200 ease-in-out text-white font-bold py-2 px-6 rounded-full shadow-lg"
           disabled={activeStep === 0}
           onClick={handleBack}
-          sx={{
-            bgcolor: "#ea2a30",
-            color: "white",
-            fontSize: "1.2rem",
-            fontWeight: "600",
-            borderRadius: "25px",
-            width: "180px",
-            py: "12px",
-            "&:hover": { bgcolor: "#d1262a" },
-          }}
+         
         >
           Back
-        </Button>
+        </button>
 
-        <Button
-          onClick={handleNext}
-          sx={{
-            bgcolor: "#D4F8FE",
-            color: "black",
-            fontSize: "1.2rem",
-            fontWeight: "600",
-            borderRadius: "25px",
-            width: "180px",
-            py: "12px",
-            "&:hover": { bgcolor: "#bcecf1" },
-          }}
-        >
-          {activeStep === steps.length - 1 ? "Finish" : "Next"}
-        </Button>
+        <button
+  className="bg-blue-500 cursor-pointer hover:bg-blue-700 active:scale-95 transition-all duration-200 ease-in-out text-white font-bold py-2 px-6 rounded-full shadow-lg"
+  onClick={handleNext}
+>
+  {activeStep === steps.length - 1 ? "Finish" : "Next"}
+</button>
+
       </div>
     </div>
   );

@@ -84,10 +84,10 @@ const Explore = () => {
         </div>
         <img
           src="../../../assets/images/Vector (1).svg"
-          className="lg:h-36  absolute lg:right-[250px] xs:hidden sm:flex sm:h-24 sm:right-[160px] sm:top-[70px] lg:block lg:top-52 "
+          className="lg:h-36  absolute lg:right-[390px] xs:hidden sm:flex sm:h-24 sm:right-[160px] sm:top-[70px] lg:block lg:top-52 "
           alt=""
         />
-        <LiaMapMarkerSolid className="text-5xl font-bold absolute xs:right-34 sm:right-[150px] lg:right-[244px] text-[#0E515B] xs:top-5 lg:top-40" />
+        <LiaMapMarkerSolid className="text-5xl font-bold absolute xs:right-34 sm:right-[150px] lg:right-[382px] text-[#0E515B] xs:top-5 lg:top-40" />
       </div>
 
       <div className="flex gap-32 justify-center flex-wrap mb-36">
