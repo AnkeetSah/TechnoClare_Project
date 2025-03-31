@@ -34,7 +34,7 @@ const MoreBtn = () => {
       <div ref={btnRef} className="text-center mb-5">
         <Link
           to="/tour"
-          className="px-8 py-3 bg-[#bbe1e6] text-[#0E515B] rounded-full font-semibold text-2xl hover:bg-[#0E515B] hover:text-[#bbe1e6] transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 inline-flex items-center justify-center gap-2"
+          className="px-8 py-2 bg-[#e1f6f9] font-MosafinSemiBold text-[#0E515B rounded-full font-semibold text-2xl hover:bg-[#b8ecf4] hover:text-[#1b3639] transition-all duration-300 shadow-md hover:shadow-lg active:scale-95 inline-flex items-center justify-center gap-2"
         >
           More
         </Link>

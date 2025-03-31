@@ -79,40 +79,40 @@ const Experience = () => {
     <div className='lg:h-[165px] xs:h-auto xs:py-5 lg:py-0 flex justify-evenly flex-wrap bg-[#f7efef] mb-40'>
       {/* Experience Years Section */}
       <div className='experience-years flex flex-col justify-center items-center xs:mb-5 lg:mb-0'>
-        <h1 className='font-MosafinBold font-black text-6xl bg-gradient-to-b from-[#0E515B] via-[#0E515B] to-[#454545] bg-clip-text text-transparent'>
+        <h1 className='font-MosafinBold font-black text-6xl text-mygreen'>
           5+
         </h1>
-        <h3 className='text-[#0E515B] text-center font-MosafinSemiBold text-2xl leading-none'>
+        <h3 className='text-mybrown text-center font-AfacadSemiBold text-2xl leading-none'>
           Years <br /> Experience
         </h3>
       </div>
 
       {/* Happy Customers Section */}
       <div className='experience-customers flex flex-col justify-center items-center xs:mb-5 lg:mb-0'>
-        <h1 className="text-6xl font-MosafinBold font-bold bg-gradient-to-b from-[#0E515B] via-[#0E515B] to-[#454545] bg-clip-text text-transparent">
+        <h1 className="text-6xl font-MosafinBold font-bold text-mygreen">
           2000+
         </h1>
-        <h3 className='text-[#0E515B] w-full font-MosafinSemiBold text-2xl text-left'>
+        <h3 className='text-mybrown w-full font-MosafinSemiBold text-2xl text-left'>
           Happy Customers
         </h3>
       </div>
 
       {/* Vehicles Section */}
       <div className='experience-vehicles flex flex-col justify-center items-center xs:mt-5 lg:mt-0'>
-        <h1 className='text-6xl bg-gradient-to-b from-[#0E515B] via-[#0E515B] to-[#454545] bg-clip-text text-transparent font-bold font-MosafinBold'>
+        <h1 className='text-6xl text-mygreen font-bold font-MosafinBold'>
           150+
         </h1>
-        <h3 className='text-[#0E515B] font-MosafinSemiBold w-full text-2xl text-left'>
+        <h3 className='text-mybrown font-MosafinSemiBold w-full text-2xl text-left'>
           Vehicles
         </h3>
       </div>
 
       {/* Guides Section */}
       <div className='experience-guides flex flex-col justify-center items-center xs:mt-5 lg:mt-0'>
-        <h1 className='text-6xl bg-gradient-to-b from-[#0E515B] via-[#0E515B] to-[#454545] bg-clip-text text-transparent font-bold font-MosafinBold'>
+        <h1 className='text-6xl text-mygreen  font-bold font-MosafinBold'>
           19+
         </h1>
-        <h3 className='text-[#0E515B] font-MosafinSemiBold w-full text-2xl text-left'>
+        <h3 className='text-mybrown font-MosafinSemiBold w-full text-2xl text-left'>
           Guides
         </h3>
       </div>

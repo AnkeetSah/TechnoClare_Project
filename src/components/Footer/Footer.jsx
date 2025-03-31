@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer
       ref={footerRef}
-      className={`bg-gradient-to-b from-white via-[#A2ECF7] to-[#286974] text-white py-10 px-8 transition-all duration-700 ${
+      className={`bg-gradient-to-b from-white via-bggreen to-mygreen text-white py-10 px-8 transition-all duration-700 ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-20 opacity-0"
       }`}
     >
@@ -159,7 +159,7 @@ const Footer = () => {
       </div>
 
 {/*--------------- for Modifying the copyright section ---------------------------------*/}
-      <div className="border-t border-gray-700 mt-8 pt-4 text-center">
+      <div className=" mt-8 pt-4 text-center">
         <p className="text-sm text-black font-MosafinBold">
            Copyright@{new Date().getFullYear()}. All right reserved
         </p>

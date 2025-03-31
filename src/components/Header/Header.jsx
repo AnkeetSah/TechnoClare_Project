@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import  { useState, useEffect, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { gsap } from "gsap";
 import { RiMenu3Fill, RiCloseLine } from "react-icons/ri";
@@ -136,7 +136,7 @@ const Header = () => {
               <li 
                 key={index} 
                 ref={el => menuItemsRef.current[index] = el}
-                className="bg-gradient-to-b from-[#0E515B] via-[#2672a2] to-[#a1c5f1] bg-clip-text text-transparent font-bold"
+                className="bg-gradient-to-b from-[#051011] via-[#021823] to-[#a6a6a7] font-AfacadRegular bg-clip-text text-transparent font-medium"
               >
                 {renderNavLink(item)}
               </li>
@@ -144,8 +144,8 @@ const Header = () => {
             <li ref={loginBtnRef}>
               <Link
                 to="/login"
-                className="inline-block text-[22px] bg-[#4c9ca9] !px-6 !py-1 !pb-3 font-medium leading-tight rounded-md 
-                  shadow-md hover:shadow-xl hover:bg-[#077078] hover:scale-105 hover:shadow-lg transform transition-all duration-300
+                className="inline-block text-[22px] bg-[#16C47F] !px-6 !py-1 !pb-3 font-medium leading-tight rounded-md 
+                  shadow-md hover:shadow-xl hover:bg-[#5ba67c] hover:scale-105 hover:shadow-lg transform transition-all duration-300
                   !text-white"
               >
                 Login

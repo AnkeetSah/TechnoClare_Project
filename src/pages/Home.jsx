@@ -43,7 +43,7 @@ const Home = () => {
       <div className="max-w-screen-xl mx-auto px-7 mt-8">
         <h1
           ref={popularPlaces}
-          className="text-[#0E515B] text-4xl font-bold relative inline-block mb-6 font-MosafinExtraBold"
+          className="text-mybrown text-4xl font-bold relative inline-block mb-6 font-MosafinExtraBold"
         >
           Popular Places To Visit
           <span className="absolute left-0 xs:-bottom-1 bottom-0 w-[70%] h-[2px] lg:top-12 bg-[#3EE5FF]"></span>

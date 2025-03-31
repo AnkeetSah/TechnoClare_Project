@@ -2,6 +2,9 @@
 @theme {
     --color-top-link: #0E515B; 
     --color-bottom-link: #77DAE9; 
+    --color-mybrown:#5C3C1A;
+    --color-mygreen:#16C47F;
+    --color-bggreen:#93fbd1;
     --color-ticket:#263238;
     --font-RabsurRegular: 'rabsurFont', sans-serif;
     --font-AfacadRegular: 'AfacadRegular', sans-serif;
